@@ -23,6 +23,13 @@
                 width: 1px !important;
                 overflow: hidden;
             }
+            
+            .container {
+                width: 1200px;
+                margin: 0 auto;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
             /*--- отменить стили по умолчанию ----*/
             
             h1,
@@ -79,10 +86,6 @@
             .header {
                 border-bottom: 1px solid #ECECEC;
                 display: block;
-                /* position: fixed;
-        width: 100%;
-        background-color: var(--white-font);
-        z-index: 10000; */
             }
             
             .navigation {
@@ -90,23 +93,48 @@
                 align-items: center;
             }
             
-            .menu:not(:last-child) {
-                margin-right: 50px;
-            }
-            
-            .menu {
+            .navigation__list {
                 display: flex;
                 align-items: center;
             }
             
-            .menu-left-side {
+            .navigation__list--right {
+                display: flex;
+                align-items: center;
+                margin-left: auto;
+            }
+            
+            .navigation__item--left {
                 display: flex;
                 align-content: center;
                 justify-content: center;
                 position: relative;
             }
             
-            .nav::after {
+            .navigation__item--left:not(:last-child) {
+                margin-right: 50px;
+            }
+            
+            .navigation__item--right:not(:last-child) {
+                margin-right: 50px;
+            }
+            
+            .logo-dark {
+                color: var(--black-logo);
+            }
+            
+            .navigation__link {
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 1.14;
+                letter-spacing: 0.02em;
+                padding-top: 32px;
+                padding-bottom: 32px;
+                display: block;
+                transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            
+            .navigation__link::after {
                 content: "";
                 width: 100%;
                 height: 4px;
@@ -119,7 +147,7 @@
                 transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
             }
             
-            .nav:hover::after {
+            .navigation__link:hover::after {
                 content: "";
                 width: 100%;
                 height: 4px;
@@ -131,7 +159,7 @@
                 opacity: 1;
             }
             
-            .nav:focus::after {
+            .navigation__link:focus::after {
                 content: "";
                 width: 100%;
                 height: 4px;
@@ -143,60 +171,12 @@
                 opacity: 1;
             }
             
-            .menu-left-side:not(:last-child) {
-                margin-right: 50px;
-            }
-            
-            .container {
-                width: 1200px;
-                margin: 0 auto;
-                padding-left: 15px;
-                padding-right: 15px;
-            }
-            
-            .logo-dark {
-                color: var(--black-logo);
-            }
-            
-            .contacts {
-                margin-left: auto;
-            }
-            
-            .text-nav {
-                margin-left: 10px;
-            }
-            
-            .nav {
-                font-weight: 500;
-                font-size: 14px;
-                line-height: 1.14;
-                letter-spacing: 0.02em;
-                padding-top: 32px;
-                padding-bottom: 32px;
-                display: block;
-                transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-            }
-            
-            .nav:hover,
-            .nav:focus,
-            .upper-contacts:hover,
-            .upper-contacts:focus {
+            .navigation__link:hover,
+            .navigation__link:focus,
+            .navigation__contacts:hover,
+            .navigation__contacts:focus {
                 color: var(--acent-color);
                 fill: var(--acent-color);
-            }
-            
-            .upper-contacts {
-                font-weight: 500;
-                font-size: 14px;
-                line-height: 1.14;
-                letter-spacing: 0.02em;
-                color: var(--second-color);
-                fill: var(--icon-color);
-                padding-top: 32px;
-                padding-bottom: 32px;
-                display: flex;
-                align-items: center;
-                transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
             }
             
             .current {
@@ -214,7 +194,24 @@
                 margin-top: 29px;
                 opacity: 1;
             }
-            /* --- main ---*/
+            
+            .navigation__contacts {
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 1.14;
+                letter-spacing: 0.02em;
+                color: var(--second-color);
+                fill: var(--icon-color);
+                padding-top: 32px;
+                padding-bottom: 32px;
+                display: flex;
+                align-items: center;
+                transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            
+            .navigation__contacts--text-right {
+                margin-left: 10px;
+            }
             /* --- hero ---*/
             
             .hero-section {
@@ -757,8 +754,8 @@
                 letter-spacing: 0.03em;
                 height: 100%;
                 transform: translateY(100%);
-                transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 500ms cubic-bezier(0.4, 0, 0.2, 1);
                 opacity: 0;
+                transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 500ms cubic-bezier(0.4, 0, 0.2, 1);
             }
             /*=======MODAL========*/
             
