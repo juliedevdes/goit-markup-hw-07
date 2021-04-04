@@ -17,7 +17,7 @@
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
-    color: var(--acent-color);
+    color: var(--accent-color);
     margin-bottom: 20px;
     display: block;
 }
@@ -32,13 +32,10 @@
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.footer__contacts--white:focus,
-.footer__contacts:focus,
-.footer__contacts--white:hover,
-.footer__contacts:hover {
-    color: var(--acent-color);
+    &:focus,
+    &:hover {
+        color: var(--accent-color);
+    }
 }
 
 .footer__item:not(:last-child) {
@@ -51,6 +48,10 @@
     letter-spacing: 0.03em;
     color: var(--white-font);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:focus,
+    &:hover {
+        color: var(--accent-color);
+    }
 }
 
 .footer__calltoaction {
@@ -84,13 +85,12 @@
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.1);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.footer__socials-icon-item:focus,
-.footer__socials-icon-item:hover {
-    background-color: var(--acent-color);
-    fill: var(--white-font);
-    cursor: pointer;
+    &:focus,
+    &:hover {
+        background-color: var(--accent-color);
+        fill: var(--white-font);
+        cursor: pointer;
+    }
 }
 
 .footer__socials-item:not(:last-child) {
@@ -107,15 +107,6 @@
     margin-bottom: 20px;
 }
 
-.footer__subsc-input::placeholder {
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 16px;
-    line-height: 1.25;
-    display: flex;
-    align-items: center;
-    letter-spacing: 0.03em;
-}
-
 .footer__subsc-form {
     display: flex;
 }
@@ -125,7 +116,7 @@
     padding-bottom: 10px;
     padding-right: 25px;
     padding-left: 25px;
-    background-color: var(--acent-color);
+    background-color: var(--accent-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     color: var(--white-font);
@@ -140,12 +131,11 @@
     fill: var(--white-font);
     cursor: pointer;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.footer__subsc-btn:hover,
-.footer__subsc-btn:focus {
-    background: var(--button-hover-color);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    &:hover,
+    &:focus {
+        background: var(--button-hover-color);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
 }
 
 .footer__subsc-input {
@@ -158,6 +148,14 @@
     background: #2F303A;
     color: var(--white-font);
     padding-left: 15px;
+    &::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 16px;
+        line-height: 1.25;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.03em;
+    }
 }
 
 .footer__send-icon {

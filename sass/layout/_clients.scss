@@ -16,13 +16,6 @@
     margin-right: 30px;
 }
 
-.clients__link:focus,
-.clients__link:hover {
-    border: 1px solid var(--acent-color);
-    cursor: pointer;
-    fill: var(--acent-color);
-}
-
 .clients__link {
     width: 170px;
     height: 90px;
@@ -33,6 +26,12 @@
     display: flex;
     fill: var(--icon-color);
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:focus,
+    &:hover {
+        border: 1px solid var(--accent-color);
+        cursor: pointer;
+        fill: var(--accent-color);
+    }
 }
 
 .clients__list {
