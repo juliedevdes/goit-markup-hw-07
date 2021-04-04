@@ -3,9 +3,17 @@
     padding: 24px 0;
 }
 
+.header__logo--dark {
+    color: var(--black-logo);
+}
+
 .footer__logo {
     margin-bottom: 20px;
     display: block;
+}
+
+.footer__logo--light {
+    color: var(--white-font);
 }
 
 .logo {
